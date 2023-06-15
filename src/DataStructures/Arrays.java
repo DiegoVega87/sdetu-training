@@ -50,7 +50,7 @@ public class Arrays {
 			System.out.println(firstName + " " + lastName + " " + email + " " + phone);
 		}
 		
-		System.out.println("\n\nTraversing the double array with enhanced for loop\n");
+		System.out.println("\n\nTraversing the double array with enhanced for loops\n");
 		// Traverse the double array Using For-Each
 		for(String[] user : users) {
 			for(String field: user) {
