@@ -29,6 +29,8 @@ public class Lab4 {
 		CCStatementReader statement =  lab4.new CCStatementReader(file);
 		statement.readData();
 		statement.getBalance();
+		statement.printTransactions();
+	
 		
 		
 
@@ -39,7 +41,7 @@ class CCStatementReader{
 	
 	private List<String[]> charges;
 	private double balance;
-	private static final double SURCHARGE = 0.1;
+	private static final double SURCHARGE = 1.1;
 	private String fileName;
 	
 	public CCStatementReader(String fileName) {
@@ -83,6 +85,12 @@ class CCStatementReader{
 		(Math.abs(balance));
 		
 		System.out.println(message);
+	}
+	
+	public void printTransactions() {
+		System.out.println("DATE   | TRANSACTION |  VENDOR |  AMOUNT |  BALANCE");
+		charges.forEach(t -> System.out.println(t[0] + "  |  " + t[1] + 
+				"  |  " + t[2] + "  |  " + t[3]));
 	}
 }
 
